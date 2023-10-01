@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.8.6 on win32)" generated="20230928 14:43:44.516" rpa="false" schemaversion="4">
+<suite id="s1" name="Main" source="C:\Users\bleac\.vscode\BeARobot\pratice_0614\main.robot">
+<test id="s1-t1" name="Init" line="8">
+<kw name="Open the website" library="testcase">
+<doc>開啟網頁以及初始化設定</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230928 14:43:44.687" level="INFO">Opening browser 'chrome' to base url 'https://www.alpha5d777.com/'.</msg>
+<msg timestamp="20230928 14:43:45.742" level="WARN">The chromedriver version (116.0.5845.96) detected in PATH at C:\Users\bleac\AppData\Local\Programs\Python\Python38\Scripts\chromedriver.exe might not be compatible with the detected chrome version (117.0.5938.92); currently, chromedriver 117.0.5938.92 is recommended for chrome 117.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20230928 14:43:44.687" endtime="20230928 14:43:48.962"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230928 14:43:48.962" endtime="20230928 14:43:49.089"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10 seconds</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230928 14:43:49.089" endtime="20230928 14:43:49.091"/>
+</kw>
+<status status="PASS" starttime="20230928 14:43:44.687" endtime="20230928 14:43:49.091"/>
+</kw>
+<doc>開啟網頁進行初始化</doc>
+<status status="PASS" starttime="20230928 14:43:44.686" endtime="20230928 14:43:49.091"/>
+</test>
+<test id="s1-t2" name="Step 1" line="12">
+<kw name="Close AD" library="testcase">
+<doc>關閉彈窗</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${FIND18}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230928 14:43:49.094" endtime="20230928 14:43:49.349"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FIND18}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230928 14:43:49.351" level="INFO">Clicking element 'xpath://*[@id="myModal"]/div[2]/div/div[2]/div[3]/div[2]/div'.</msg>
+<status status="PASS" starttime="20230928 14:43:49.349" endtime="20230928 14:43:49.883"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${AD}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230928 14:43:49.884" endtime="20230928 14:43:50.100"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230928 14:43:50.101" level="INFO">Clicking element 'class:modalCloseBtn.common__btnStatus'.</msg>
+<status status="PASS" starttime="20230928 14:43:50.100" endtime="20230928 14:43:50.633"/>
+</kw>
+<status status="PASS" starttime="20230928 14:43:49.094" endtime="20230928 14:43:50.633"/>
+</kw>
+<doc>關閉彈窗後進行註冊</doc>
+<status status="PASS" starttime="20230928 14:43:49.092" endtime="20230928 14:43:50.634"/>
+</test>
+<test id="s1-t3" name="Step 2" line="16">
+<kw name="Register Function" library="testcase">
+<doc>進行註冊全流程</doc>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${REGISTER_B}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230928 14:43:50.635" endtime="20230928 14:43:50.936"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${REGISTER_B}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230928 14:43:50.936" level="INFO">Clicking element 'xpath://*[@id="app"]/div[2]/nav/div[1]/div/div[3]/div'.</msg>
+<status status="PASS" starttime="20230928 14:43:50.936" endtime="20230928 14:43:51.477"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${REGISTER_ACCOUNT}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230928 14:43:51.477" endtime="20230928 14:43:51.536"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${REGISTER_ACCOUNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230928 14:43:51.536" level="INFO">Clicking element 'xpath://*[@id="myModal"]/div[2]/div/div[2]/div[1]/img[1]'.</msg>
+<status status="PASS" starttime="20230928 14:43:51.536" endtime="20230928 14:43:51.706"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${USER_TERMS}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230928 14:43:51.706" endtime="20230928 14:43:51.745"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${USER_TERMS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230928 14:43:51.746" level="INFO">Clicking element 'xpath://*[@id="myModal"]/div[2]/div/div[2]/div[3]/label'.</msg>
+<status status="PASS" starttime="20230928 14:43:51.745" endtime="20230928 14:43:51.788"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${NEXT_STEP}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230928 14:43:51.788" endtime="20230928 14:43:51.810"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NEXT_STEP}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230928 14:43:51.812" level="INFO">Clicking element 'xpath://*[@id="myModal"]/div[2]/div/div[2]/div[4]/div[2]'.</msg>
+<status status="PASS" starttime="20230928 14:43:51.812" endtime="20230928 14:43:51.888"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${FIELD}</var>
+<arg>${ALLFIELD}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230928 14:43:51.898" level="INFO">${FIELD} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8033706acc537bb0e49388853ad75c1a", element="1F3FB152F7A4BD8EA8A700367C681393_element_125")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<status status="PASS" starttime="20230928 14:43:51.889" endtime="20230928 14:43:51.898"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD[0]}</arg>
+<arg>${AC}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230928 14:43:51.899" level="INFO">Typing text 'test20230928' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8033706acc537bb0e49388853ad75c1a", element="1F3FB152F7A4BD8EA8A700367C681393_element_125")&gt;'.</msg>
+<status status="PASS" starttime="20230928 14:43:51.898" endtime="20230928 14:43:52.046"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD[1]}</arg>
+<arg>${PS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230928 14:43:52.047" level="INFO">Typing text 'Aa11111' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8033706acc537bb0e49388853ad75c1a", element="1F3FB152F7A4BD8EA8A700367C681393_element_127")&gt;'.</msg>
+<status status="PASS" starttime="20230928 14:43:52.046" endtime="20230928 14:43:52.147"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD[2]}</arg>
+<arg>${PS_CHECK}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230928 14:43:52.149" level="INFO">Typing text 'Aa11111' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8033706acc537bb0e49388853ad75c1a", element="1F3FB152F7A4BD8EA8A700367C681393_element_129")&gt;'.</msg>
+<status status="PASS" starttime="20230928 14:43:52.147" endtime="20230928 14:43:52.242"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD[3]}</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230928 14:43:52.244" level="INFO">Typing text 'JohnHuang@gangutech.com' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8033706acc537bb0e49388853ad75c1a", element="1F3FB152F7A4BD8EA8A700367C681393_element_131")&gt;'.</msg>
+<status status="PASS" starttime="20230928 14:43:52.243" endtime="20230928 14:43:52.354"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${SENDMAIL}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230928 14:43:52.354" endtime="20230928 14:43:52.379"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SENDMAIL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230928 14:43:52.380" level="INFO">Clicking element 'class:common__button.blue.common__btnStatus'.</msg>
+<status status="PASS" starttime="20230928 14:43:52.379" endtime="20230928 14:43:52.496"/>
+</kw>
+<kw name="Get Captcha" library="pyFunction">
+<var>${CaptCha}</var>
+<msg timestamp="20230928 14:44:04.712" level="INFO">請輸入驗證碼：</msg>
+<msg timestamp="20230928 14:44:04.712" level="INFO">${CaptCha} = 662809</msg>
+<status status="PASS" starttime="20230928 14:43:52.496" endtime="20230928 14:44:04.712"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${FIELD[4]}</arg>
+<arg>${CaptCha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230928 14:44:04.713" level="INFO">Typing text '662809' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="8033706acc537bb0e49388853ad75c1a", element="1F3FB152F7A4BD8EA8A700367C681393_element_133")&gt;'.</msg>
+<status status="PASS" starttime="20230928 14:44:04.712" endtime="20230928 14:44:04.787"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>${FIND_SURE}</var>
+<arg>${SURE}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230928 14:44:04.797" level="INFO">${FIND_SURE} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8033706acc537bb0e49388853ad75c1a", element="1F3FB152F7A4BD8EA8A700367C681393_element_141")&gt;, &lt;selenium.webdriver.remote.webelement.WebElemen...</msg>
+<status status="PASS" starttime="20230928 14:44:04.787" endtime="20230928 14:44:04.797"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FIND_SURE[-1]}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230928 14:44:04.798" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="8033706acc537bb0e49388853ad75c1a", element="1F3FB152F7A4BD8EA8A700367C681393_element_152")&gt;'.</msg>
+<status status="PASS" starttime="20230928 14:44:04.797" endtime="20230928 14:44:04.829"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${WELLCOME}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230928 14:44:04.830" level="INFO">Clicking element 'class:swal2-confirm.common__bgButton.golden.common__btnStatus.swal-modalWrapper-confirm'.</msg>
+<status status="PASS" starttime="20230928 14:44:04.829" endtime="20230928 14:44:06.446"/>
+</kw>
+<status status="PASS" starttime="20230928 14:43:50.635" endtime="20230928 14:44:06.446"/>
+</kw>
+<doc>輸入註冊資訊並完成註冊</doc>
+<status status="PASS" starttime="20230928 14:43:50.634" endtime="20230928 14:44:06.447"/>
+</test>
+<doc>練習專案，開啟指定網站驗證所有功能</doc>
+<status status="PASS" starttime="20230928 14:43:44.517" endtime="20230928 14:44:06.448"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Main">Main</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230928 14:43:45.742" level="WARN">The chromedriver version (116.0.5845.96) detected in PATH at C:\Users\bleac\AppData\Local\Programs\Python\Python38\Scripts\chromedriver.exe might not be compatible with the detected chrome version (117.0.5938.92); currently, chromedriver 117.0.5938.92 is recommended for chrome 117.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
